@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 27px;
+  font-size: 24px;
   text-align: center;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -72,20 +72,22 @@ span {
   background-color: rgb(250,250,250);
   border-radius: 0;
   border: 0;
+  overflow: hidden;
 }
 
 .navbar-brand {
-  padding-top: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .navbar-brand h1 { /* Company's name */
   font-family: 'Lora', serif; 
   color: rgb(0,0,0);
-  font-size: 1.2em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 1px 1px 1px #222;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   line-height: .75;
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
@@ -129,19 +131,38 @@ p .text-center {
 }
 /* END HEADER */
 
+@media (min-width: 1200px) {
+#header-nav {
+  height: 70px;
+}
+.navbar-brand {
+    padding-top: 10px;
+    height: 70px;
+    border-bottom: 20px;
+    } 
 
+@media (min-width: 992px) and (max-width: 1199px) {
+#header-nav {
+    padding-top: 10px;
+    height: 70px; 
+    }  
 
+@media (min-width: 768px) and (max-width: 991px) {
+  #header-nav {
+    padding-top: 10px;
+    height: 70px; 
+    }
 /********** Extra small devices only **********/
+
 @media (max-width: 767px) {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
-    height: 80px; /* To set a specifical height of the heading for phone screens*/
+    height: 70px;
   }
+
   .navbar-brand h1 { /* Company's name */
     padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width 
-    This adjusts font size together with the display size */
   }
 
   #collapsable-nav a { /* Collapsed nav menu text */
@@ -149,33 +170,3 @@ p .text-center {
   }
  /* End Header */
 
- /* Desktop PC view */
-
-@media (min-width: 992px) {
- 
-  .col-lg-4 {
-    width: 33.33%;
-    float: left;
-  }
-}
-
-/* Tablet PC view */
-@media (min-width: 768px) and (max-width: 991px) {
- 
-  .col-md-6 {
-    width: 50%;
-    float: left;
-  }
-  .col-md-12 {
-    width: 100%;
-    float: left;
-  }
-}
-/* Cell phone view */
-@media (max-width: 767px)  {
-  
-  .col-sm-12 {
-    float: left;
-    width: 100%;
-  }
-}
